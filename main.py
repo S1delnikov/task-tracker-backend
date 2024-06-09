@@ -23,7 +23,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://s1delnikov-task-tracker-frontend-772d.twc1.net", "https://s1delnikov-task-tracker-frontend-772d.twc1.net/"],
     allow_credentials=True, 
-    allow_methods=["POST", "GET", "PUT", "DELETE"],
+    allow_methods=["POST", "GET", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=["Content-Type", "Set-Cookie", "Access-Control-Allow-Headers", "Access-Control-Allow-Origin", "Authorization"],
 )
 
