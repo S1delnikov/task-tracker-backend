@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Depends, status
+from fastapi import FastAPI, APIRouter, HTTPException, Depends, status, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 # import schemas
@@ -34,7 +34,10 @@ app.mount('/images', StaticFiles(directory=static_folder_images))
 app.mount('/documents', StaticFiles(directory=static_folder_documents))
 
 models.Base.metadata.create_all(bind=engine)
-
+@app.middleware("https")
+async def qwerty(request: Request, call_next):
+    response - await call_next(request)
+    return response
 
 app.include_router(users.router)
 app.include_router(tasks.router)
