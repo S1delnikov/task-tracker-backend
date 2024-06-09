@@ -21,7 +21,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "http://192.168.0.103:8080"],
+    allow_origins=["https://s1delnikov-task-tracker-frontend-772d.twc1.net"],
     allow_credentials=True, 
     allow_methods=["*"],
     allow_headers=["*"],
