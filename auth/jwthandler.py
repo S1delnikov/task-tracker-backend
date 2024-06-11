@@ -12,7 +12,7 @@ from database.connection import db_dependency
 
 SECRET_KEY = "65f9ed62d7925e69e65ed0ef07812173147c52068ce07cb51952c050c17ccbb3"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = 7200
 
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
